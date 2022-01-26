@@ -5,25 +5,25 @@
 		  date_default_timezone_set("Africa/Lagos");
 
 		  function get_categories(){
-              global $conn, $categories;
-              $food_items = array();
-              $categories = array();
-              $main_array = array();
-				$get_categories = $conn->prepare("SELECT category FROM food_items WHERE 1 ORDER BY category ASC");
-				$get_categories->execute();
-				foreach (($get_categories->fetchAll()) as $cat) {
-					if (!(in_array($cat['category'], $categories))) {
-						array_push($categories, $cat['category']);
-					}
+		      global $conn, $categories;
+		      $food_items = array();
+		      $categories = array();
+           
+			$get_categories = $conn->prepare("SELECT category FROM food_items WHERE 1 ORDER BY category ASC");
+			$get_categories->execute();
+			foreach (($get_categories->fetchAll()) as $cat) {
+				if (!(in_array($cat['category'], $categories))) {
+					array_push($categories, $cat['category']);
 				}
-				foreach ($categories as $category) {
+			}
+			foreach ($categories as $category) {
 
-			  		$get_items = $conn->prepare('SELECT * FROM food_items WHERE category="' . $category . '" ORDER BY item_name ASC');
-					$get_items->execute();
+				$get_items = $conn->prepare('SELECT * FROM food_items WHERE category="' . $category . '" ORDER BY item_name ASC');
+				$get_items->execute();
 
-					$food_items[$category] = json_encode($get_items->fetchAll());
-			  	}
-                  echo json_encode($food_items);
+				$food_items[$category] = json_encode($get_items->fetchAll());
+			}
+	  		echo json_encode($food_items);
             }
 
 		  function place_order(){
