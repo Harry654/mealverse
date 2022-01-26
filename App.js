@@ -34,7 +34,7 @@ export default function App() {
 
 
   let parent_data = {
-    apiURL: 'https://harrison-calculator.000webhostapp.com', 
+    apiURL: 'YOUR_SERVER_URL', 
     theme: theme, 
     user_data: user_data,
   }
