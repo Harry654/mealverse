@@ -7,3 +7,8 @@ Code Usage:
 4. The MySQL database file can be found under the PHP folder as mealverse.sql (just import into your database)
 5. To ensure successful database connection, input the correct username, password and database name in the dbconn.php file under the PHP/Mealverse folder.
 6. The PHP API uses PDO for database connection
+
+
+App preview:
+<img src="./app/images/mealverse-screenshot.jpg" alt="preview 1" />
+<img src="./app/images/mealverse-screenshot-2.jpg" alt="preview 2" />
