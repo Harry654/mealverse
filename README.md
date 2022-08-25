@@ -9,6 +9,6 @@ Code Usage:
 6. The PHP API uses PDO for database connection
 
 
-App preview:
-<img src="./app/images/mealverse-screenshot.jpg" alt="preview 1" height="300" width="150" />
-<img src="./app/images/mealverse-screenshot-2.jpg" alt="preview 2" height="300" width="150" />
+
+<img src="./app/images/mealverse-screenshot.jpg" alt="preview 1" height="400" width="200" />
+<img src="./app/images/mealverse-screenshot-2.jpg" alt="preview 2" height="400" width="200" />
